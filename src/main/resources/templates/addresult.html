@@ -1,0 +1,21 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Add person</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<p><a href="/addperson"><-Back</a></p>
+<h1>Add person</h1>
+<hr>
+<h3>Successfully added a person with data:</h3>
+<p th:text="'Surname: ' + ${person.surname}" />
+<p th:text="'name: ' + ${person.name}" />
+<p th:text="'middlename: ' + ${person.middlename}" />
+<p th:text="'age: ' + ${person.age}" />
+<p th:text="'salary: ' + ${person.salary}" />
+<p th:text="'email: ' + ${person.email}" />
+<p th:text="'company: ' + ${person.company}" />
+<a href="/addperson">Add another person</a>
+</body>
+</html>

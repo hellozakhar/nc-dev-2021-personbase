@@ -1,0 +1,23 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Add person</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<p><a href="/"><-Back</a></p>
+<h1>Add person</h1>
+<hr>
+<form action="#" th:action="@{/addperson}" th:object="${person}" method="post">
+    <p><input type="text" th:field="*{surname}" placeholder="Surname" pattern="[A-Za-zА-Яа-яЁё]{2,30}" required="true"/></p>
+    <p><input type="text" th:field="*{name}" placeholder="Name" pattern="[A-Za-zА-Яа-яЁё]{2,30}" required="true"/></p>
+    <p><input optional type="text" th:field="*{middlename}" placeholder="Middle Name" pattern="[A-Za-zА-Яа-яЁё]{2,30}"/></p>
+    <p><input type="number" th:field="*{age}" placeholder="Age" min="1" max="99" required="true"/></p>
+    <p><input type="number" th:field="*{salary}" placeholder="Salary" min="1" max="10000000" required="true"/></p>
+    <p><input type="email" th:field="*{email}" placeholder="Email" required="true"/></p>
+    <p><input type="text" th:field="*{company}" placeholder="Company" pattern="[A-Za-zА-Яа-яЁё]{1,35}" required="true"/></p>
+    <p><a href="/uploadperson">Upload file</a></p>
+    <p><input type="submit" value="Add" /> <input type="reset" value="Reset" /></p>
+</form>
+</body>
+</html>
